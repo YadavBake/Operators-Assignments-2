@@ -19,7 +19,7 @@
 		int a,b,c,d;
 		a = b = c = d = 20;
 		System.out.println(a+".."+b+".."+c+"...."+d);
-						 //20	  20	20		 20
+				//20	  20	20	 20
 	  
 		- We can't performe chained assignment directly at the time of declaration.
 		
@@ -57,7 +57,7 @@
 	 
 		Ex.
 
-		byte b = 10;								byte b = 10;					byte b = 10;						byte b = 127;
+		byte b = 10;						byte b = 10;			byte b = 10;			    byte b = 127;
 		b = b+1;                        			b++;                            b+=1;  //(b= (byte) (b+1)           b+ = 3;
 		System.out.println(b);          			System.out.println(b);//11     System.out.println(b);               System.out.println(b); //-126
 					
@@ -76,7 +76,7 @@
 		a +=  b -= c *= d /= 2;
 		
 		System.out.println(a+"..."+b+"..."+c+"...."+d);
-						 //-160   -180    200		10 			
+				 //-160   -180    200	   10 			
 		
 		
 		
