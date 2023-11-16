@@ -104,11 +104,11 @@
 -> r1==r2 return true if and only if both references pointing to the same object(reference compairision or address compairision).
 
 
-		r1 			r2 
-		|			 |	
-		|			 |---	
-		|	--------	|
-		-->| object|<---|
+		r1 		r2 
+		|		 |	
+		|		 |---	
+		|   --------	    |
+		-->| object|<-------|
 		   ---------
 		
 		r1== r2 true 
@@ -116,10 +116,10 @@
 	
 	
 	Thread t1 = new Thread()
-	Thread t2 = new Thread()						t1 			t3 						r2 			 
-	Thread t3= t1;                                  |			 |	                    |				
-	System.out.println(t1==t2); //false             |			 |---                   |			 
-	System.out.println(t1==t3); //true 	            |	--------	|                   |	--------	
+	Thread t2 = new Thread()		    t1 		t3 			r2 			 
+	Thread t3= t1;                               |		 |	                |				
+	System.out.println(t1==t2); //false          |		 |---                   |			 
+	System.out.println(t1==t3); //true 	     |  --------    |                   |  --------	
                                                     -->| object|<---|                   -->| object|
                                                        ---------                           ---------
 
@@ -129,12 +129,12 @@
 	
 	Ex.
 	
-	Thread t = new Thread();					t 					o 					s 							
-	Object o = new Object();			        |				    |			        |			
-	String s = new String("Durga");			    |			        |			        |			
-	System.out.println(t==o); // false          |	--------        |	--------        |	--------
-	System.out.println(o==s); //false           -->| 		|        -->| object|        -->| DURGA |
-													---------           ---------           ---------
+	Thread t = new Thread();		    t 			o 		     s 							
+	Object o = new Object();		    |		        |		     |			
+	String s = new String("Durga");		    |		        |		     |			
+	System.out.println(t==o); // false          |	--------        |    --------        |	--------
+	System.out.println(o==s); //false           -->|	|        -->| object|        -->| DURGA |
+							---------           ---------           ---------
 	
 	System.out.println(s==t); //CE: Incompairable type: java.lang.String and java.lang.Thread.
 
@@ -144,12 +144,12 @@
 	
 	- In general we can use double equal(==) operator for reference compairision(address compairision) and .equals() method for content compairision.
 	
-	String s1 = new String("Durga");								s1 					s2 			
-	String s2 = new String("Durga");                                |			        |			
-	System.out.println(s1==s2); //FALSE                             |			        |			
-	System.out.println(s1.equals(s2)); //TRUE                       |	--------        |	--------
+	String s1 = new String("Durga");				s1   		   s2 			
+	String s2 = new String("Durga");                                |		    |			
+	System.out.println(s1==s2); //FALSE                             |		    |			
+	System.out.println(s1.equals(s2)); //TRUE                       |   --------        |	--------
 	                                                                 -->| DURGA|        -->| DURGA |
-                                                                        ---------           ---------
+                                                                           ---------           ---------
 
 
 Note: For object reference 'r', r==null is always false .
