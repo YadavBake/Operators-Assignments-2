@@ -13,8 +13,8 @@
  
 	 object o = l.get(0);
 	 if(o instanceof Student){
-																	------------------
-		 Student s = new (Student)o;						l------>|	|	|	|	|
+												------------------
+		 Student s = new (Student)o;						l------>|   |	|   |	|
 		 //perform student speficic functionality.					-----------------
 	 }
 		 else if( o instanceof Customer){
@@ -26,16 +26,16 @@
 		 
  Syntax 
 
-				r 			instanceof 				x 
-				|									|
-				|									|
+				r 			instanceof 		x 
+				|						|
+				|						|
 			object reference 				class|interface name 					
 	
 
 	Ex. 
-																					  Object 		
-																						  |	 -----Runnable(I)
-		Thread t = new Thread();														  | |  	
+																  Object 		
+																  |   -----Runnable(I)
+		Thread t = new Thread();											  | |  	
 		System.out.println( t instanceof Thread); //tru									  | |	
 		System.out.println( t instanceof Object); //true								Thread 
 		System.out.println( t instanceof Runnable);//true 
@@ -87,20 +87,20 @@
 		
 		100
 		101
-	----------
+	    ----------
 		100
 		
 	System.out.println(4|5); //5 
 		
 		100
 		101
-	  --------	
-	    101
+	     --------	
+	       101
 	System.out.println(4^5); //1
 	
 		100
 		101
-	---------	
+	     ---------	
 		001 
 
 -------------------------------------
@@ -120,8 +120,8 @@
 							|--These is most significant bit if it is 0 means positive and it is 1 means negative 	
 							|
 			4 = 			0 	0 0 0 0 . . . . . 0 1 0 0 
-							|					  --------> value	 
-					  sign bit 		
+							|		  --------> value	 
+					  	    sign bit 		
 
 
 
@@ -131,7 +131,7 @@
 							   2's complement form
 							
 							0   0 0 0 0 . . . . . 0 1 0 0
-												+		1
+									+  	1
 							-------------------------------
 							0   0 0 0 0 . . . . . 0  1 0 1 == 5 
 				-			------------------------------		
