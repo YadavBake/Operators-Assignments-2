@@ -1,6 +1,6 @@
 
-														Operators & Assignments Part-7 || Interview FAQs
-													======================================================
+											Operators & Assignments Part-7 || Interview FAQs
+								   		     ======================================================
 
 --------------------------- 
  16. new vs newInstance(). 
@@ -96,22 +96,22 @@
 ==============================================
 	
 	--------------------------------------------------------------------------------------------------------------------------------
-	|			 new 									|						newInstance											|
+	|			 new 				|						newInstance		|
 	---------------------------------------------------------------------------------------------------------------------------------
-	|1. It is operator in java 							|	1. 	It is a method prasent in java.lan.Class			                |
-	|                                                   |                                                                           |
-	|2. We can use new operator to create object if		|	2. We can use these method to create object if we dont know             |
-	|	we know at the beagining.						|	   class name at beagining and it is available dynamically              |
-	|													|	   at runtime.		                                                    |
-	|                                                   |                                                                           |
-	|3. To use new operator class not required to		|	3. To use newInstance() method compulsory class should                  |
-	|	containe no-arg constructor.					|	   contain no-arg constructor otherwise we will get                     |
-	|													|		Runtime exception InstantiationException.                           |
-	|                                                   |                                                                           |
-	|4. At runtime if .class file not available 		|	4. At runtime if the currosponding .class file not available then we    |
-	|	then we will get runtime exception saying		|	   will get runtime exception saying ClassNotFoundException.            |
-	|	NoClassDefFoundError. which is unchecked        |      Which is checked.                                                    |
-	|                                                   |                                                                           |
+	|1. It is operator in java 				|1. 	It is a method prasent in java.lan.Class		        |
+	|                                                       |                                                                       |
+	|2. We can use new operator to create object if		|2. We can use these method to create object if we dont know            |
+	|	we know at the beagining.			|   class name at beagining and it is available dynamically             |
+	|							|   at runtime.		                                                |
+	|                                                       |                                                                       |
+	|3. To use new operator class not required to		|3. To use newInstance() method compulsory class should                 |
+	|	containe no-arg constructor.			|   contain no-arg constructor otherwise we will get                    |
+	|							|   Runtime exception InstantiationException.                           |
+	|                                                       |                                                                       |
+	|4. At runtime if .class file not available 		|4. At runtime if the currosponding .class file not available then we   |
+	|	then we will get runtime exception saying	|   will get runtime exception saying ClassNotFoundException.           |
+	|	NoClassDefFoundError. which is unchecked        |     Which is checked.                                                 |
+	|                                                       |                                                                       |
 	---------------------------------------------------------------------------------------------------------------------------------
 	
 
