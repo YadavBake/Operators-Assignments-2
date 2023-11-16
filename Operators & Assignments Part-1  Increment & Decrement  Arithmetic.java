@@ -30,29 +30,29 @@
 
  	 
 																					
-                                                                                    						Decrement
-							Increment																			|
-								|                                                   							|
-								|                                                   	-----------------------------------------------------
-		-----------------------------------------------------                       	|												    |
-		|												    |                       Pre-increment operator						post-increment operator
-	Pre-increment operator						post-increment operator             	y = --x;									 y = x--;
-		y = ++x;									 y = x++;
+                                                                                    				   Decrement
+					Increment									|
+		 			   |                                                   				|
+					   |                                                   	-----------------------------------------------------
+		-----------------------------------------------------                       	|						    |
+		|						    |                       Pre-increment operator			post-increment operator
+	Pre-increment operator				post-increment operator             	y = --x;					 y = x--;
+		y = ++x;					 y = x++;
 		
 		
 		
 		
 	----------------------------------------------------------------------------------------------	
-	|Expresion 		|		initial value of x 	|		value of y 		|		final value of x |
+	|Expresion 		|	initial value of x |	value of y  |	final value of x    |
 	----------------------------------------------------------------------------------------------
-	|y = ++x 		|				10			|			11			|			11           |
-	|               |                           |                       |                        |
-	|y = x++:		|			   	10			|			10			|			11 	         |
-	|	            |                           |                       |                        |
-	|y = --x;		|				10			|			9			|			9	         |
-	|	            |                           |                       |                        |
-	|y = x--		|				10			|			10			|			9	         |
-	|	            |                           |                       |                        |
+	|y = ++x 		|		10	   |	  11	    |		11           |
+	|                       |   	                   |                |                        |
+	|y = x++:		|	   	10	   |	  10	    |		11 	     |
+	|	                |                          |                |                        |
+	|y = --x;		|		10	   |	   9	    |		9	     |
+	|	                |                          |                |                        |
+	|y = x--		|		10	   |	  10	    |		9	     |
+	|	                |                          |                |                        |
 	----------------------------------------------------------------------------------------------
 
    ->  We can apply increment and decrement operators only for variables but not constant values. If we are trying to apply for constant values then we will get compile time error.
@@ -60,7 +60,7 @@
 
 	Ex. 
 
-		int x = 10;								int x =10;
+		int x = 10;				int x =10;
 		int y = ++x;                            int y = ++10;
 		Sopln(y); //11                          Sopln(y);//CE Unexpected type found: value required :variable
 		
@@ -78,13 +78,13 @@
 			Ex. 
 
 
-			int x = 10;				final int x = 10;
+			int x = 10;		final int x = 10;
 			x = 11 ;                x = 11 ; // ---> cannot assign a value to final variable x.
 			Sopln(x);               Sopln(x);
 		
 		
 		
-			int x = 10;				final int x = 10;
+			int x = 10;		final int x = 10;
 			x++;                    x++ ; // ---> cannot assign a value to final variable x.
 			sopln(x); //11          Sopln(x);
 		
@@ -92,7 +92,7 @@
 
 		Ex. 
 
-		int x =10;				char ch = 'a';			double d = 10.5;			boolean b = true;
+		int x =10;		char ch = 'a';		double d = 10.5;	    boolean b = true;
 		x++;                    ch++;                   d++:                        b++; //-> operator ++ cannot be applied to boolean.
 		Sopln(x); //valid       sopln(ch); //valid      sopln(d); //valid           sopln(b);
 		
@@ -103,7 +103,7 @@
 	    
 		Ex.1 	
 		
-				byte a = 10;												a (+.-.*,/)b 	max (int, type of a, type of b)	
+			 byte a = 10;												a (+.-.*,/)b 	max (int, type of a, type of b)	
 		         byte b = 20;																max(int,byte,byte) 
 		         byte c = a+b; //CE : PLP foud: int required:byte. a+b == max(int byte byte)
 		                                        Sopln(c);
@@ -126,7 +126,7 @@
 					
 		-> But in the case of increment and decrement operators internal type casting will be performed automatically	
 			
-				b++ == b=(byte)(b+1).
+		b++ == b=(byte)(b+1).
 		
 		byte b =10;
 		b++;				//b++ ===> b=(type of b) (b+1)
@@ -136,16 +136,16 @@
 -----------------------------------------		
    2. Arithmetic Operators. (+,-,*,/,%)		
 -----------------------------------------
-																									 -----------------------------------
+												     -----------------------------------
   ->  If we apply any arithmetic operator between two variable 'a' and 'b' the result type  is always| max(int, type of a , type of b).|   
-																									 -----------------------------------
+												     ------------------------------------
 
 
 		byte +byte = int 							byte--->short---
-		byte+short = int 										   |
-		short +short = int										   |----> int --->long--->float--->double  	
+		byte+short = int 									   |
+		short +short = int									   |----> int --->long--->float--->double  	
 		byte+long = long									 |---> |---->	
-		long +double= double 						char-----|
+		long +double= double 								char-----|
 		float + long= float
 		char +char = int 
 		
