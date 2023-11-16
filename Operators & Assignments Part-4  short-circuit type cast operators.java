@@ -10,13 +10,13 @@
  -> These are excatly same as bitwise operators(&,|) except  the followong differences.
 
 	---------------------------------------------------------------------------------------------------------------------
-	|				 &,|			  					|							&&,||								|
+	|	 &,|			  			|			&&,||				    |
 	--------------------------------------------------------------------------------------------------------------------|
-	|1. Both argumenrs should be evaluated always 		|	1. Second argumenrs evaluation is optional.                 |
-	|                                                   |                                                               |
-	|2. Relativelly performance is low.					|	2. Relativally performance is high.                         |
-	|                                                   |                                                               |
-	|3. Applicable for both boolean and integeral types |	3. Applicable only for boolean but not for integeral types  |
+	|1. Both argumenrs should be evaluated always 		|1. Second argumenrs evaluation is optional.                |
+	|                                                       |                                                           |
+	|2. Relativelly performance is low.			|2. Relativally performance is high.                        |
+	|                                                       |                                                           |
+	|3. Applicable for both boolean and integeral types     |3. Applicable only for boolean but not for integeral types |
 	---------------------------------------------------------------------------------------------------------------------
 
 	
@@ -29,15 +29,15 @@ Note:
 	
 Ex. 
 
-																		---------------------		
-	int x =10, y= 15;													|		|	y  |  x	|	
-																		---------------------
+									    ---------------------		
+	int x =10, y= 15;					   	    |	    |  y  |  x	|	
+									    ---------------------
 	if(++x <10 & ++y>15){                                               |   &   |  11  | 17 |
-		                                                                |   &&  |  11  | 16 |
-		x++;                                                            |   |   |  12  | 16 |
-	}                                                                   |   ||	|  12  | 16 |
+		                                                            |   &&  |  11  | 16 |
+		x++;                                                        |   |   |  12  | 16 |
+	}                                                                   |   ||  |  12  | 16 |
 	else {                                                              |       |      |    |
-																		---------------------		
+									    ---------------------		
 		y++;
 	}
 	System.out.println(x+"..."+y);
@@ -45,7 +45,7 @@ Ex.
 	
 Ex. 
 
-		int x =10; 									int x =10; 
+		int x =10; 				     int x =10; 
 		if(++x > && (x/0 >10)){                     if(++x > & (x/0 >10)){
 			                                        	
 			System.out.println("Hello");            	System.out.println("Hello");
@@ -84,10 +84,10 @@ Ex.
   -> The following are variaous possible convertions where implicit type-casting will be performed   
   
 			byte--> short|
-		    			 |--->int-->float--->double
-            		|--->|
+		    		     |--->int-->float--->double
+            		|---------->|
             		|
-            char---> 
+            char------->| 
 			
 			IMPLICIT TYPE-CASTING
   
@@ -114,7 +114,7 @@ Ex.
  -> The following are variaous possiblity where explicit type-casting is required.
 	
 		byte<---short|
-        			 |<---int-<--float<---double
+        		     |<---int-<--float<---double
         		|<---|
         		|
         char<---- 
@@ -135,15 +135,15 @@ Ex.
 	-> Whenever we are assigning begger data type value to smaller data type variable by explicit type-casting the most significant bit will be lost we have to considard only LSb(
 	   list significant bits).
 	
-	int x =130;						int x =	130 ==> 		0 0 0 0 ......0 10000010
-	byte b= (byte)x;				byte b= (byte)x;==>     1	 0 0 0 0 0 1 0 		
-	System.out.println(b);			   2|130			    | 		2's complement form	
-									  -------			   -ve
+	int x =130;						int x =	130 ==>			0 0 0 0 ......0 10000010
+	byte b= (byte)x;				byte b= (byte)x;==>     		1	 0 0 0 0 0 1 0 		
+	System.out.println(b);			   2|130					| 		2's complement form	
+									  -------	       -ve
 									   2|65-0
 									  -------	
 									   2|32-1	
 									  --------						1 1 1 1 1 0 1
-									   2|16-0								 +  1
+									   2|16-0						         +  1
 									  --------						-------------
 									   2|8-0						1 1 1 1 1 1 0
 									 ---------						
@@ -160,17 +160,17 @@ Ex.
 	
 	int x = 150;							int x =150; => 0 000........010010110
 	short s = (short)x;						short s = (short)x;==> 0 000...010010110
-	System.out.println(s);										   |	------------	
-																 +ve 		 |
-																			150
+	System.out.println(s);									|	------------	
+												+ve 		 |
+														150
 	
 	
 	byte b = (byte)x;						byte b = (byte)x; ==> 1 		0 0 1 0 1 1 0 										
-	System.out.println(b);//-106								  |					|
-																 -ve		1 1 0 1 0 0 1==> 2's compliment forms 
-																					   +1
-		 2|150																--------------
-	    -------																1 1 0 1 0 1 0 
+	System.out.println(b);//-106							      |				|
+											     -ve		1 1 0 1 0 0 1==> 2's compliment forms 
+															   +1
+		 2|150												--------------
+	    -------												1 1 0 1 0 1 0 
          2|75-0
         -------	
          2|37-1													  1  1   0   1   0   1   0	 
